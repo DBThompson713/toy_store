@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+for i in 1..20
+    Toy.create(
+        name: Faker::Lorem.word,
+        description: Faker::Lorem.sentence,
+        date: Faker::Business.credit_card_expiry_date,
+        user: Faker::Internet.username
+    )
+    puts "Created #{i} toys"
+end
